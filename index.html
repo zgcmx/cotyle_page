@@ -314,16 +314,9 @@
         <section class="hero teaser">
           <div class="container is-max-desktop">
             <div class="hero-body has-text-centered">
-              <p style="margin-top: 20px;">
-                Our main contributions can be summarized as:
+              <p>
+                 In this paper, we aim to adapt the text-to-image diffusion model (T2I-DM) to perform code-to-style image generation, that is, given a numerical style code, the system can generate images in a specific, consistent style. As shown in the figure, we propose our method, CoTyle, which comprises 3 main components. We begin by training a discrete style codebook with pairs of style images. The codebook can extract style embedding and discrete indices from reference image. Using these style embeddings, we train a T2I-DM capable of generating images that share the same style as the reference image. Finally, we train an autoregressive model to generate style indices, unlocking seed-to-style image generation.
               </p>
-      
-              <ol class="steps-list">
-                <li> We introduce code-to-style image generation, a novel task which enables the creation of diverse, consistent visual styles conditioned solely on a numerical code.</li>
-                <li> We propose <strong>CoTyle</strong>, a framework that achieves code-to-style generation by learning a discrete style codebook and an autoregressive style generator.</li>
-                <li> We expand upon the CoTyle framework. Beyond code-to-style generation, it now facilitates generation conditioned on a reference image and allows for style interpolation.</li>
-                <li> We conducted extensive experiments that demonstrate the effectiveness of CoTyle. The results validate that a single code can serve as a powerful, compact style controller, unlocking a vast space of reproducible novel styles. </li>
-              </ol>
               <!-- 新增图片展示部分 -->
               <img 
                 src="assets/overview.png" 
@@ -347,9 +340,15 @@
           }
         </style>
         <p style="margin-top: 20px;">
-           In this paper, we aim to adapt the text-to-image diffusion model (T2I-DM) to perform code-to-style image generation, that is, given a numerical style code, the system can generate images in a specific, consistent style. As shown in the figure, we propose our method, CoTyle, which comprises 3 main components. We begin by training a discrete style codebook with pairs of style images. The codebook can extract style embedding and discrete indices from reference image. Using these style embeddings, we train a T2I-DM capable of generating images that share the same style as the reference image. Finally, we train an autoregressive model to generate style indices, unlocking seed-to-style image generation.
+          Our main contributions can be summarized as:
         </p>
 
+        <ol class="steps-list">
+          <li> We introduce code-to-style image generation, a novel task which enables the creation of diverse, consistent visual styles conditioned solely on a numerical code.</li>
+          <li> We propose <strong>CoTyle</strong>, a framework that achieves code-to-style generation by learning a discrete style codebook and an autoregressive style generator.</li>
+          <li> We expand upon the CoTyle framework. Beyond code-to-style generation, it now facilitates generation conditioned on a reference image and allows for style interpolation.</li>
+          <li> We conducted extensive experiments that demonstrate the effectiveness of CoTyle. The results validate that a single code can serve as a powerful, compact style controller, unlocking a vast space of reproducible novel styles. </li>
+        </ol>
 
       </div>
       </div>
