@@ -166,17 +166,17 @@
                 <span class="author-block">
                   Bingcan Wang<sup>1</sup>,</span>
                   <span class="author-block">
-                    Xiaoming Wei<sup>1</sup>,</span>
+                    Shuhao Cui<sup>1</sup>,</span>
                   </span>
                   <span class="author-block">
-                    Jie Hu<sup>1</sup>,</span>
+                    Kai Wu<sup>1</sup>,</span>
                   </span>
                   <span class="author-block">
                     Guoliang Kang<sup>2</sup>,</span>
             </div>
 
                   <div class="is-size-6 publication-authors">
-                    <span class="author-block"><sup>1 </sup></span>Meituan, China</span>
+                    <span class="author-block"><sup>1 </sup></span>Kuaishou, China</span>
                   </div>
                   <div class="is-size-6 publication-authors">
                     <span class="author-block"><sup>2 </sup></span>Beihang University, China</span>
@@ -290,7 +290,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Innovative visual stylization is a cornerstone of artistic creation, while generating and representing novel styles remains a persistent challenge.Existing generative methods often rely on style images, lengthy textual descriptions, or parameter-efficient fine-tuning (PEFT) to guide models in generating images with specific styles. However, these methods struggle to create novel styles and require complex representations to convey stylistic information.In this paper, we affirm that a style is worth one numerical code by introducing the novel task, code-to-style image generation, which produces images with novel, consistent visual styles conditioned solely on a style code.To date, this field has only been explored by the industry(e.g., Midjourney), with no open-source research from the academic community.Specifically, we train a discrete style codebook to extract style embeddings from reference images. These embeddings then condition a T2I-DM to generate an image that aligns with the reference style.<i>Specifically, we first train a discrete style codebook to extract style representations from reference images.</i><i>Then, we train a text-to-image diffusion model (T2I-DM) conditioned on the output of the codebook, enabling it to generate images with specific style.</i>Using the style codebook, we encode a large set of style images into indices and train an autoregressive model on them to model their distribution, which acts as the style generator.During inference, a numerical code deterministically samples a novel sequence of indices from the transformer. This sequence is then condition the diffusion process, generating style images.Unlike existing methods, our approach offers unparalleled simplicity and diversity, unlocking a vast space of reproducible styles from minimal input.Extensive experiments validate that SeeTyle effectively turns a single code into a powerful style controller, demonstrating a style is worth one code.
+            Innovative visual stylization is a cornerstone of artistic creation, while generating and representing novel styles remains a persistent challenge.Existing generative methods often rely on style images, lengthy textual descriptions, or parameter-efficient fine-tuning (PEFT) to guide models in generating images with specific styles. However, these methods struggle to create novel styles and require complex representations to convey stylistic information.In this paper, we affirm that a style is worth one numerical code by introducing the novel task, code-to-style image generation, which produces images with novel, consistent visual styles conditioned solely on a style code.To date, this field has only been explored by the industry(e.g., Midjourney), with no open-source research from the academic community.Specifically, we train a discrete style codebook to extract style embeddings from reference images. These embeddings then condition a T2I-DM to generate an image that aligns with the reference style.<em>Specifically, we first train a discrete style codebook to extract style representations from reference images.</em><em>Then, we train a text-to-image diffusion model (T2I-DM) conditioned on the output of the codebook, enabling it to generate images with specific style.</em>Using the style codebook, we encode a large set of style images into indices and train an autoregressive model on them to model their distribution, which acts as the style generator.During inference, a numerical code deterministically samples a novel sequence of indices from the transformer. This sequence is then condition the diffusion process, generating style images.Unlike existing methods, our approach offers unparalleled simplicity and diversity, unlocking a vast space of reproducible styles from minimal input.Extensive experiments validate that SeeTyle effectively turns a single code into a powerful style controller, demonstrating a style is worth one code.
           </p>
         </div>
       </div>
@@ -548,53 +548,7 @@
 <!--End BibTex citation -->
 
 <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column custom-width">
-          <!-- <h2 class="title is-3"></h2> -->
-          <div class="content has-text-justified">
-  <p>
-    <a name="ref-txt2vid" id="ref-txt2vid"></a>
-    [1] Minbin Huang, Yanxin Long, Xinchi Deng, Ruihang Chu, Jiangfeng Xiong, Xiaodan Liang, Hong Cheng, Qinglin Lu, and Wei Liu.2024. Dialoggen: Multi-modal interactive dialogue system for multi-turn text-to-image generation. arXiv preprint arXiv:2403.08857 (2024).
-  </p>
-  <p>
-    <a name="ref-TAV" id="ref-TAV"></a>
-    [2] Kolors Team. 2024. Kolors: Effective Training of Diffusion Model for Photorealistic Text-to-Image Synthesis. arXiv preprint (2024).
-  </p>
-  <p>
-    <a name="ref-gen1" id="ref-gen1"></a>
-    [3] Zhipu AI Tsinghua University. 2025. CogView4 and CogView3 and CogView-3Plus.
-    Retrieved March 21, 2025 from https://github.com/THUDM/CogView4
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [4] Lixue Gong, Xiaoxia Hou, Fanshi Li, Liang Li, Xiaochen Lian, Fei Liu, Liyang Liu, Wei Liu, Wei Lu, Yichun Shi, et al. 2025. Seedream 2.0: A Native Chinese-English Bilingual Image Generation Foundation Model. arXiv preprint arXiv:2503.07703(2025).
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [5] Tim Brooks, Aleksander Holynski, and Alexei A Efros. 2023. Instructpix2pix:Learning to follow image editing instructions. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 18392–18402.
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [6] Shu Zhang, Xinyi Yang, Yihao Feng, Can Qin, Chia-Chih Chen, Ning Yu, Zeyuan Chen, Huan Wang, Silvio Savarese, Stefano Ermon, et al. 2024. Hive: Harnessing human feedback for instructional visual editing. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 9026–9036.
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [7] Mude Hui, Siwei Yang, Bingchen Zhao, Yichun Shi, Heng Wang, Peng Wang, Yuyin Zhou, and Cihang Xie. 2024. Hq-edit: A high-quality dataset for instructionbased image editing. arXiv preprint arXiv:2404.09990 (2024).
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [8] Kai Zhang, Lingbo Mo, Wenhu Chen, Huan Sun, and Yu Su. 2023. Magicbrush:A manually annotated dataset for instruction-guided image editing. Advances in Neural Information Processing Systems 36 (2023), 31428–31449.
-  </p>
-  <p>
-    <a name="ref-pnp" id="ref-pnp"></a>
-    [9] Haozhe Zhao, Xiaojian Shawn Ma, Liang Chen, Shuzheng Si, Rujie Wu, Kaikai An, Peiyu Yu, Minjia Zhang, Qing Li, and Baobao Chang. 2024. UltraEdit: Instructionbased Fine-Grained Image Editing at Scale. Advances in Neural Information Processing Systems 37 (2024), 3058–3093.
-  </p>
-  </div>
-        </div>
-      </div>
-    </div>  
+  <div class="hero-body"> 
   <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
